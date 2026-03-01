@@ -152,6 +152,7 @@
 
 .name-sequence {
   display: inline-block;
+  white-space: nowrap;
 }
 
 .name-letter {
@@ -595,6 +596,11 @@
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.publication-a a{
+  color: #f5f9f8;
+
 }
 
 @keyframes card-up {

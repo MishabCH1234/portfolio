@@ -22,7 +22,7 @@ function Publication() {
       <h2 className="section-title">publication.</h2>
       <ul className="info-list">
         {publications.map((pub) => (
-          <li key={pub.title} className="info-item">
+          <li key={pub.title} className="info-item publication-a">
             <h3>{pub.title}</h3>
             <p>{pub.description}</p>
             <p>

@@ -1,5 +1,5 @@
 import useScrollReveal from '../hooks/useScrollReveal'
-import { FaGithub, FaLink } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 
 const projects = [
   {
@@ -8,31 +8,27 @@ const projects = [
       'Conducted a comparative study evaluating different autoencoder architectures for detecting deepfake images. Analyzed their performance in identifying manipulated visuals by measuring accuracy, robustness, and feature extraction capabilities.',
     tech: ['ML', 'kaggle', 'Pytorch', 'tensorflow'],
     githubUrl: '#',
-    liveUrl: '#',
   },
   {
-    title: 'Detecting deepfake images and videos using autoencoder, PG mini-project',
+    title: 'Detecting deepfake images and videos using autoencoder',
     details:
       'Developed models to detect deepfake images and videos using image-based and video- based analysis techniques. Applied deep learning, particularly autoencoder.',
     tech: ['ML', 'Pytorch'],
-    githubUrl: '#',
-    liveUrl: '#',
+    githubUrl: 'https://github.com/MishabCH1234/Deepfake-detection-using-Convolutional-AutoEncoder-CAE-',
   },
   {
     title: 'Build Tracker',
     details:
       'CiviManage is a web-based civil construction management system designed to manage site workers, billing, project expenses, and financial tracking. The platform allows administrators to monitor credit and debit transactions, maintain worker profiles, and efficiently organize construction site operations in one centralized system',
     tech: ['ReactJS', 'Tailwind', 'NodeJS', 'MySql'],
-    githubUrl: '#',
-    liveUrl: '#',
+    githubUrl: 'https://github.com/MishabCH1234/Build-Tracker',
   },
   {
     title: 'Automatic Answer Checker',
     details:
-      'Introducing Netflix Clone - an Ultimate Entertainment Destination. Crafted with precision and powered by cutting-edge technologies, Netflix offers a seamless and immersive streaming experience that rivals even the biggest names in the industry.',
-    tech: ['Django', ' ', 'CSS'],
+      'Online Descriptive Exam System: A web app for global exams with instant AI grading. Users log in, apply via email notifications, take exams on set dates, and get scores by keyword/synonym matching against stored standards.',
+    tech: ['Django', 'Android Studio ', 'MySql'],
     githubUrl: '#',
-    liveUrl: '#',
   },
 ]
 
@@ -74,7 +70,6 @@ function Projects() {
             </ul>
             <div className="project-links">
               {renderProjectLink(project.githubUrl, <FaGithub />, 'View Project')}
-              {renderProjectLink(project.liveUrl, <FaLink />, 'Live')}
             </div>
           </article>
         ))}
