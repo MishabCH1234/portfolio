@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const repository = process.env.GITHUB_REPOSITORY?.split('/')[1]
-const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === 'true'
+const REPO_BASE_PATH = '/portfolio/'
 
-// GitHub Pages serves project sites from /<repo>/, not /
-export default defineConfig({
+// Use repo base path for production builds so GitHub Pages project URLs resolve assets.
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: isGitHubPagesBuild && repository ? `/${repository}/` : '/',
-})
+  base: command === 'build' ? REPO_BASE_PATH : '/',
+}))
